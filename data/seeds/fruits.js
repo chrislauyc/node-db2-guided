@@ -1,12 +1,10 @@
-exports.seed = function(knex) { // dependency injection
-  // Deletes ALL existing entries
-  return knex('table_name').del() // reset primary keys
+exports.seed = function (knex) { // dependency injection
+  return knex('fruits').truncate() // reset primary keys
     .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('fruits').insert([
+        { colName: 'rowValue1' },
+        { colName: 'rowValue2' },
+        { colName: 'rowValue3' }
       ]);
     });
 };
