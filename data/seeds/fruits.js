@@ -1,7 +1,6 @@
-
-exports.seed = function(knex) {
+exports.seed = function(knex) { // dependency injection
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('table_name').del() // reset primary keys
     .then(function () {
       // Inserts seed entries
       return knex('table_name').insert([
