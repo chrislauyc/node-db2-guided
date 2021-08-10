@@ -1,5 +1,5 @@
 exports.seed = function (knex) { // dependency injection
-  return knex('fruits').del() // reset primary keys
+  return knex('fruits').truncate() // reset primary keys
     .then(function () {
       return knex('fruits').insert([
         { fruit_name: 'apple', avg_weight: 10.5, is_delicious: true }, // DELETE THE IDS!!!!!!!!!
