@@ -1,7 +1,7 @@
 const express = require('express');
 const knex = require('knex');
 
-const db = knex({
+const db = knex({ // this here shouldn't be here
   client: 'sqlite3',
   connection: {
     filename: './data/produce.db3'
